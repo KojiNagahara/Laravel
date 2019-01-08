@@ -84,7 +84,7 @@ class AnswerController extends Controller
      */
     public function update(Request $request, Category $category, Answer $answer)
     {
-        Answer::update([
+        $answer->update([
             'level' => $request->level,
             'description' => $request->description,
         ]);
