@@ -25,13 +25,12 @@ class CategoryController extends Controller
             'name'=>request('name')
         ]);
 
-
         return redirect('category');
     }
 
-    public function show()
+    public function show(Category $category)
     {
-
+        return view('category.edit', compact('category'));
     }
 
     public function edit(Category $category)

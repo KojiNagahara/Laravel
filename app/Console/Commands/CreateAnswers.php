@@ -53,23 +53,23 @@ class CreateAnswers extends Command
             ['level' => 5, 'description' => '独力でのアーキテクチャ構成/運用経験あり', 'category_id' => 1,  'created_at' => $now, 'updated_at' => $now],
             //2:ライブラリ/フレームワーク
             ['level' => 1, 'description' => '未経験', 'category_id' => 2, 'created_at' => $now, 'updated_at' => $now],
-            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 1,  'created_at' => $now, 'updated_at' => $now],
+            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 2,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 3, 'description' => '独力でのアプリケーション作成経験あり', 'category_id' => 2,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 4, 'description' => '独力でのアーキテクチャ構成/運用経験あり', 'category_id' => 2,  'created_at' => $now, 'updated_at' => $now],
             //3:DB
             ['level' => 1, 'description' => '未経験', 'category_id' => 3,  'created_at' => $now, 'updated_at' => $now],
-            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 1,  'created_at' => $now, 'updated_at' => $now],
+            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 3,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 3, 'description' => 'クエリの実装経験がある', 'category_id' => 3,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 4, 'description' => '論理設計/物理設計をしたことがある', 'category_id' => 3,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 5, 'description' => 'チューニングをしたことがある', 'category_id' => 3,  'created_at' => $now, 'updated_at' => $now],
             //4:ミドルウェア運用
             ['level' => 1, 'description' => '未経験', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
-            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 1,  'created_at' => $now, 'updated_at' => $now],
+            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 3, 'description' => 'インストールしたことがある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 4, 'description' => '実運用をしたことがある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
             //5:クラウド環境
             ['level' => 1, 'description' => '未経験', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
-            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 1,  'created_at' => $now, 'updated_at' => $now],
+            ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 3, 'description' => '個人的に試験運用をしたことがある', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 4, 'description' => '業務で運用をしたことがある', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
         ];

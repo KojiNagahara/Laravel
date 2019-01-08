@@ -5,25 +5,24 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">カテゴリー一覧</div>
+                    <div class="card-header">カテゴリに対する回答一覧</div>
 
                     <div class="card-body">
+                        <p>カテゴリ：{{ $category->name }}</p>
                         <table class="table table-bordered table-hover table-condensed">
                             <tr>
                                 <th></th>
-                                <th>カテゴリ名</th>
-                                <th></th>
-                                <th></th>
+                                <th>レベル</th>
+                                <th>レベルの説明</th>
                                 <th></th>
                             </tr>
-                           @foreach($categories as $category)
+                            @foreach($answers as $answer)
                                 <tr>
-                                    <td><a href="/category/{{  $category->id }}/edit" class="btn btn-primary">カテゴリ編集</a></td>
-                                    <td>{{  $category->name }}</td>
-                                    <td><a href="/skill/{{ $category->id }}" class="btn btn-primary">スキル一覧</a></td>
-                                    <td><a href="/answer/{{ $category->id }}" class="btn btn-primary">スキルレベル回答一覧</a></td>
+                                    <td><a href="/answer/{{ $category->id }}/{{ $answer->id }}/edit" class="btn btn-primary">回答編集</a></td>
+                                    <td>{{  $answer->level }}</td>
+                                    <td>{{  $answer->description }}</td>
                                     <td>
-                                        <form method="POST" action="/category/{{ $category->id }}">
+                                        <form method="POST" action="/answer/{{ $category->id }}/{{ $answer->id }}">
                                             @method('DELETE')
                                             @csrf
                                             <button type="submit" class="btn btn-danger">削除</button>
@@ -33,7 +32,7 @@
                             @endforeach
                         </table>
 
-                        <a href="/category/create" class="btn btn-primary">新規カテゴリ追加</a>
+                        <a href="/answer/{{ $category->id }}/create" class="btn btn-primary">回答追加</a>
                     </div>
                 </div>
             </div>
