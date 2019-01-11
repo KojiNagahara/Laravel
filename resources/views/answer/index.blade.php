@@ -9,8 +9,8 @@
 
                     <div class="card-body">
                         <p>カテゴリ：{{ $category->name }}</p>
-                        <table class="table table-bordered table-hover table-condensed">
-                            <tr>
+                        <table class="table table-bordered table-hover table-sm table-condensed">
+                            <tr class="table-primary">
                                 <th></th>
                                 <th>レベル</th>
                                 <th>レベルの説明</th>
@@ -19,8 +19,8 @@
                             @foreach($answers as $answer)
                                 <tr>
                                     <td><a href="/answer/{{ $category->id }}/{{ $answer->id }}/edit" class="btn btn-primary">回答編集</a></td>
-                                    <td>{{  $answer->level }}</td>
-                                    <td>{{  $answer->description }}</td>
+                                    <td class="align-middle">{{  $answer->level }}</td>
+                                    <td class="align-middle">{{  $answer->description }}</td>
                                     <td>
                                         <form method="POST" action="/answer/{{ $category->id }}/{{ $answer->id }}">
                                             @method('DELETE')

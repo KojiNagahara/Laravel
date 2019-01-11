@@ -9,8 +9,8 @@
 
                     <div class="card-body">
                         <p>カテゴリ：{{ $category->name }}</p>
-                        <table class="table table-bordered table-hover table-condensed">
-                            <tr>
+                        <table class="table table-bordered table-hover table-condensed table-sm">
+                            <tr class="table-primary">
                                 <th></th>
                                 <th>スキル名</th>
                                 <th></th>
@@ -18,7 +18,7 @@
                             @foreach($skills as $skill)
                                 <tr>
                                     <td><a href="/skill/{{  $category->id }}/{{ $skill->id }}/edit" class="btn btn-primary">スキル編集</a></td>
-                                    <td>{{  $skill->name }}</td>
+                                    <td class="align-middle">{{  $skill->name }}</td>
                                     <td>
                                         <form method="POST" action="/skill/{{ $category->id }}/{{ $skill->id }}">
                                             @method('DELETE')

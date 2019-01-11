@@ -8,8 +8,8 @@
                     <div class="card-header">カテゴリー一覧</div>
 
                     <div class="card-body">
-                        <table class="table table-bordered table-hover table-condensed">
-                            <tr>
+                        <table class="table table-bordered table-hover table-condensed table-sm">
+                            <tr class="table-primary">
                                 <th></th>
                                 <th>カテゴリ名</th>
                                 <th></th>
@@ -19,7 +19,7 @@
                            @foreach($categories as $category)
                                 <tr>
                                     <td><a href="/category/{{  $category->id }}/edit" class="btn btn-primary">カテゴリ編集</a></td>
-                                    <td>{{  $category->name }}</td>
+                                    <td class="align-middle">{{  $category->name }}</td>
                                     <td><a href="/skill/{{ $category->id }}" class="btn btn-primary">スキル一覧</a></td>
                                     <td><a href="/answer/{{ $category->id }}" class="btn btn-primary">スキルレベル回答一覧</a></td>
                                     <td>

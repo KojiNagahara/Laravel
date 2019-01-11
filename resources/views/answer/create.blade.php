@@ -9,6 +9,15 @@
 
                     <div class="card-body">
                         <p>カテゴリ：{{ $category->name }}</p>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form method="POST" action="/answer/{{ $category->id }}" class="form-horizontal">
                             @csrf
                             <div class="form-group">

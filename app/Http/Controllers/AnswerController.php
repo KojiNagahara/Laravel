@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 class AnswerController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @param  \App\Category  $category
@@ -41,6 +51,9 @@ class AnswerController extends Controller
      */
     public function store(Request $request, Category $category)
     {
+        $validated = $request->validate([
+           'level' => 'required|integer'
+        ]);
         Answer::create([
             'level' => $request->level,
             'description' => $request->description,

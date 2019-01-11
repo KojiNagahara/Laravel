@@ -17,7 +17,7 @@ class CreateProfileSkillTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('profile_id');
             $table->unsignedInteger('skill_id');
-            $table->integer('level');
+            $table->integer('level')->default(0);
             $table->string('description');
             $table->timestamps();
 
