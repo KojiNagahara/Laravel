@@ -55,7 +55,6 @@ class CreateAnswers extends Command
             ['level' => 1, 'description' => '未経験', 'category_id' => 2, 'created_at' => $now, 'updated_at' => $now],
             ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 2,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 3, 'description' => '独力でのアプリケーション作成経験あり', 'category_id' => 2,  'created_at' => $now, 'updated_at' => $now],
-            ['level' => 4, 'description' => '独力でのアーキテクチャ構成/運用経験あり', 'category_id' => 2,  'created_at' => $now, 'updated_at' => $now],
             //3:DB
             ['level' => 1, 'description' => '未経験', 'category_id' => 3,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 3,  'created_at' => $now, 'updated_at' => $now],
@@ -65,12 +64,12 @@ class CreateAnswers extends Command
             //4:ミドルウェア運用
             ['level' => 1, 'description' => '未経験', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
-            ['level' => 3, 'description' => 'インストールしたことがある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
-            ['level' => 4, 'description' => '実運用をしたことがある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
+            ['level' => 3, 'description' => '利用したことがある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
+            ['level' => 4, 'description' => '業務で運用をしたことがある', 'category_id' => 4,  'created_at' => $now, 'updated_at' => $now],
             //5:クラウド環境
             ['level' => 1, 'description' => '未経験', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 2, 'description' => '未経験だが興味はある', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
-            ['level' => 3, 'description' => '個人的に試験運用をしたことがある', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
+            ['level' => 3, 'description' => '利用したことがある', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
             ['level' => 4, 'description' => '業務で運用をしたことがある', 'category_id' => 5,  'created_at' => $now, 'updated_at' => $now],
         ];
         DB::table('answers')->insert($data);

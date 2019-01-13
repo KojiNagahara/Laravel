@@ -17,12 +17,12 @@ class CreateProfileSkillTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('profile_id');
             $table->unsignedInteger('skill_id');
-            $table->integer('level')->default(0);
+            $table->integer('level')->default(1);
             $table->string('description');
             $table->timestamps();
 
-            $table->foreign('profile_id')->references('id')->on('profiles');
-            $table->foreign('skill_id')->references('id')->on('skills');
+            $table->foreign('profile_id')->references('id')->on('profiles')->onDelete('cascade');
+            $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
         });
     }
 
