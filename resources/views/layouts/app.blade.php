@@ -37,6 +37,9 @@
                             <a class="nav-link" href="{{ route('home') }}">ユーザホーム</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('profile.edit') }}">プロファイル編集</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('category.index') }}">マスター管理</a>
                         </li>
                     </ul>

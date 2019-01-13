@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // 初回ログイン時、プロファイルが設定されていない場合はプロファイルの作成画面に遷移する。
+        $user = Auth::user();
+        $profile = $user->profile();
+
+        if ($profile === null) {
+            return redirect()->action('ProfileController@create');
+        } else {
+            return view('home');
+        }
     }
 }

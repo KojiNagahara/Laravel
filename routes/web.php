@@ -40,6 +40,12 @@ Route::get('/answer/{category}/{answer}/edit', 'AnswerController@edit');     // 
 Route::patch('/answer/{category}/{answer}', 'AnswerController@update');      // 更新
 Route::delete('/answer/{category}/{answer}', 'AnswerController@destroy');    // 削除
 
+Route::get('/profile', 'ProfileController@index');                              // ユーザプロファイル閲覧ページ
+Route::get('/profile/create', 'ProfileController@create');                      // ユーザプロファイル作成ページ
+Route::post('/profile', 'ProfileController@store');                             // 作成
+Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');    // ユーザプロファイル編集ページ
+Route::patch('/profile', 'ProfileController@update');                           // 更新
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

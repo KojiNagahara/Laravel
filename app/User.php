@@ -30,11 +30,11 @@ class User extends Authenticatable
 
     public function hasProfile()
     {
-        return $this->profile()->count() > 0;
+        return $this->profile() != null;
     }
 
     public function profile()
     {
-        return $this->hasOne('App\Profile');
+        return $this->hasOne('App\Profile')->first();
     }
 }

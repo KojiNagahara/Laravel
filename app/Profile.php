@@ -11,10 +11,13 @@ class Profile extends Model
     ];
 
     public function user() {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User')->first();
     }
 
     public function skills() {
-        return $this->hasMany('App\Skill');
+        return $this->belongsToMany('App\Skill')
+            ->as('skillLevel')
+            ->withPivot(['level', 'description'])
+            ->withTimestamps();
     }
 }

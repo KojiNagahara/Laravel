@@ -15,6 +15,9 @@ class Skill extends Model
     }
 
     public function profiles() {
-        return $this->hasMany('App\Profile');
+        return $this->belongsToMany('App\Profile')
+            ->as('skillLevel')
+            ->withPivot(['level', 'description'])
+            ->withTimestamps();
     }
 }
