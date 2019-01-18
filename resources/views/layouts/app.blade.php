@@ -84,7 +84,7 @@
             @yield('content')
         </main>
 
-        <footer class="">
+        <footer>
             <p class="text-sm-center">Copyright 2018-2019 kjnghr.net</p>
         </footer>
     </div>

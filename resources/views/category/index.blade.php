@@ -16,7 +16,7 @@
                                 <th></th>
                                 <th></th>
                             </tr>
-                           @foreach($categories as $category)
+                            @foreach($categories as $category)
                                 <tr>
                                     <td><a href="/category/{{  $category->id }}/edit" class="btn btn-primary">カテゴリ編集</a></td>
                                     <td class="align-middle">{{  $category->name }}</td>

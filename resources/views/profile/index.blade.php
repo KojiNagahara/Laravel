@@ -24,8 +24,8 @@
                                     <th>スキルレベル</th>
                                     <th>スキルレベル説明</th>
                                 </tr>
-                               @foreach($profile->skills as $skill)
-                                   @if($skill->skillLevel->level > 1)
+                                @foreach($profile->skills as $skill)
+                                    @if($skill->skillLevel->level > 1)
                                         <tr>
                                             <td class="align-middle">{{  $skill->name }}</td>
                                             <td class="align-middle">{{  $skill->skillLevel->level }}</td>

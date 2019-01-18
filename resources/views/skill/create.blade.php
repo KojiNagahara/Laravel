@@ -16,7 +16,7 @@
                                 <input type="text" name="name" placeholder="スキル名" class="col-md-8">
                             </div>
                             <div class="form-group">
-                               <button type="submit" class="btn btn-primary">追加</button>
+                                <button type="submit" class="btn btn-primary">追加</button>
                             </div>
                         </form>
                     </div>

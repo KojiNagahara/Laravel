@@ -37,4 +37,18 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Profile')->first();
     }
+
+    public function teams()
+    {
+        return $this->belongsToMany('App\Team')
+            ->as('belongsTo')
+            ->withPivot(['status', 'isAdmin'])
+            ->withTimestamps();
+    }
+
+    public function activeTeams()
+    {
+        return $this->teams()
+            ->where('isActive', true);
+    }
 }

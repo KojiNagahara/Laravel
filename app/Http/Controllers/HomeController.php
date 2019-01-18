@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,7 +32,9 @@ class HomeController extends Controller
         if ($profile === null) {
             return redirect()->action('ProfileController@create');
         } else {
-            return view('home');
+            // ダッシュボードに現在稼働中のチーム情報を表示する
+            $activeTeams = $user->activeTeams();
+            return view('home', compact('activeTeams'));
         }
     }
 }

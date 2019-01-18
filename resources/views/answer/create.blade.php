@@ -29,7 +29,7 @@
                                 <input type="text" name="description" placeholder="レベルの説明" class="col-md-8" required>
                             </div>
                             <div class="form-group">
-                               <button type="submit" class="btn btn-primary">追加</button>
+                                <button type="submit" class="btn btn-primary">追加</button>
                             </div>
                         </form>
                     </div>

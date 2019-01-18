@@ -15,7 +15,6 @@ use Faker\Generator as Faker;
 
 $factory->define(App\User::class, function (Faker $faker) {
     return [
-        'id' => 10000,
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
@@ -26,7 +25,6 @@ $factory->define(App\User::class, function (Faker $faker) {
 
 $factory->define(App\User::class, function (Faker $faker) {
     return [
-        'id' => 10001,
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
@@ -37,7 +35,6 @@ $factory->define(App\User::class, function (Faker $faker) {
 
 $factory->define(App\User::class, function (Faker $faker) {
     return [
-        'id' => 10002,
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
