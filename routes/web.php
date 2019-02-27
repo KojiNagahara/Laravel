@@ -49,6 +49,15 @@ Route::patch('/profile', 'ProfileController@update');                           
 
 Route::resource('team', 'TeamController');
 
+Route::get('/member/{team}/', 'MemberController@index')->name('member.index');  // チームメンバートップ
+Route::get('/member/{team}/find', 'MemberController@find');                     // チームメンバー候補検索処理
+Route::get('/member/{team}/create', 'MemberController@create');                 // メンバー追加ページ
+Route::post('/member/{team}', 'MemberController@store');                        // メンバー追加処理
+Route::post('/member/{team}/accept', 'MemberController@accept');                // メンバー追加承認
+Route::post('/member/{team}/deny', 'MemberController@deny');                    // メンバー追加否認
+Route::get('/member/{team}/{user}/edit', 'MemberController@edit');              // メンバー情報編集
+Route::patch('/member/{team}/{user}', 'MemberController@update');               // 更新
+Route::delete('/member/{team}/{user}', 'MemberController@destroy');             // 削除
 
 Auth::routes();
 

@@ -19,7 +19,7 @@
                                 <label class="control-label" for="avatar_filename">アバター用画像ファイル</label>
                                 <input type="text" name="avatar_filename" placeholder="アバター用画像ファイル" class="col-md-8" value="{{ $profile->avatar_filename }}" readonly>
                             </div>
-                            <div class="accordion" id="skillSettings" role="tablist" aria-multiselectable="true">
+                            <div class="accordion mb-2" id="skillSettings" role="tablist" aria-multiselectable="true">
                                 <label class="control-label">スキル設定</label>
                                 @foreach($categories as $index => $category)
                                     <div class="card">

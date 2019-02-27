@@ -44,8 +44,8 @@
                             @foreach($team->members as $member)
                                 <tr>
                                     <td class="align-middle">{{  $member->name }}</td>
-                                    <td class="align-middle">{{  $member->member->status }}</td>
-                                    <td class="align-middle">{{  $member->member->isAdmin }}</td>
+                                    <td class="align-middle">{{  $member->detail->status }}</td>
+                                    <td class="align-middle">{{  $member->detail->isAdmin }}</td>
                                 </tr>
                             @endforeach
                         </table>

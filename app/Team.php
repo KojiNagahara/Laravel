@@ -2,7 +2,6 @@
 
 namespace App;
 
-use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
@@ -13,20 +12,23 @@ class Team extends Model
     public const LEAVED = 3;
 
     protected $fillable = [
-        'name', 'description','leader','isActive'
+        'name', 'description','isActive'
     ];
 
     public function members()
     {
         return $this->belongsToMany('App\User')
-            ->as('member')
+            ->as('detail')
             ->withPivot(['status', 'isAdmin'])
             ->withTimestamps();
     }
 
     public function isAdmin(User $user)
     {
-        return $this->members()->where('user_id', $user->id)->first()->member->isAdmin;
+        if ($this->members()->where('user_id', $user->id)->count() == 0) {
+            return false;
+        }
+        return $this->members()->where('user_id', $user->id)->first()->detail->isAdmin;
     }
 
 }

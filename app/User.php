@@ -49,6 +49,24 @@ class User extends Authenticatable
     public function activeTeams()
     {
         return $this->teams()
-            ->where('isActive', true);
+            ->where('isActive', true)
+            ->wherePivot('status', Team::JOINED);
+    }
+
+    public function teamInvitation()
+    {
+        return $this->teams()
+            ->where('isActive', true)
+            ->wherePivot('status', Team::INVITED);
+    }
+
+    public function hasTeamInvitation()
+    {
+        return $this->teamInvitation()->count() > 0;
+    }
+
+    public function skills()
+    {
+        return $this->hasManyThrough('App\Skill','App\Profile');
     }
 }
